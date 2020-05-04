@@ -1,15 +1,12 @@
-
-# kafka-on-aws
-Deployment scripts to deploy Kafka Confluent suite on AWS EC2.
-
 ### Used versions
 * Terraform v0.12.24
 * ansible 2.9.7
+* Confluent 5.3.0
 
 ### Terraform
 
     > Update your ~/.aws/credentials
-    > Create an EC2 KeyPair
+    > Create an EC2 KeyPair (Important !!!!)
     > cd terraform
     > terraform init
     > terraform plan -out plan.json
@@ -35,7 +32,7 @@ Deployment scripts to deploy Kafka Confluent suite on AWS EC2.
 ### Ansible
 * Update hosts.yml with your public DNS created instances
 * Test you can SSH your machines and run the playbook
-
+>
     > ansible -i hosts.yml all -m ping 
     > ansible-playbook -i hosts.yml all.yml
 
