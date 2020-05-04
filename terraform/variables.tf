@@ -12,7 +12,7 @@ variable "instance_count" {
     "ksql"            = 0
     "schema"          = 0
     "control_center"  = 1
-    "broker"          = 1
+    "broker"          = 3 // Needs at least 3 brokers (replication.factor minimum set to 3)
     "zookeeper"       = 1
   }
 }
